@@ -30,7 +30,7 @@ try {
     $connect = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password); //create connection
     $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo '<p>Connected Successfully</p>' . '<br>'; 
-    $set = $connect->prepare("SELECT * FROM `accounts`\n" . "where id<6");  //select records where id is less than 6
+    $set = $connect->prepare("SELECT * FROM accounts where id<6");  //select records where id is less than 6
     $set->execute(); //execute the sql statement
     $record=$set->rowCount();  //count the number of records where id is less than 6
     echo '<br>';

@@ -12,11 +12,11 @@ class TableRows extends RecursiveIteratorIterator {
         return "<td style='width: 150px; border: 1px solid black;'>" . parent::current(). "</td>";
     }
 
-    function rowStart() { 
+    function beginChildren() { 
         echo "<tr>"; 
     } 
 
-    function rowEnd() { 
+    function endChildren() { 
         echo "</tr>" . "\n";
     } 
 } 
